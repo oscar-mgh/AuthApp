@@ -1,0 +1,25 @@
+<div class="content">
+  <h1 class="m-b-26">Dashboard</h1>
+
+  <div class="card m-b-30">
+    <p class="p-t-10 p-b-10">Usuarios conectados recientemente:</p>
+
+    @for (user of users(); track user) {
+    <pre>{{ user.name }}</pre>
+
+    }
+  </div>
+
+  <div class="card">
+    <h3 class="p-t-10 p-b-10">
+      Bienvenido - <span class="name">{{ user()?.name }}</span>
+    </h3>
+
+    <p>{{ user()?.email }}</p>
+  </div>
+
+  <br />
+  <button class="btn" (click)="onLogout()">
+    <h3>cerrar sesion</h3>
+  </button>
+</div>
